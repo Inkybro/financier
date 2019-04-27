@@ -1,8 +1,10 @@
 require 'active_support/all'
+require 'chronic'
 require 'flt'
 require 'flt/d'
-require 'pry'
 
+require 'financier/ledger'
+require 'financier/transaction'
 require 'financier/version'
 
 module Financier
