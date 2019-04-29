@@ -4,6 +4,7 @@ require 'flt'
 require 'flt/d'
 
 require 'financier/ledger'
+require 'financier/rate'
 require 'financier/transaction'
 require 'financier/version'
 
