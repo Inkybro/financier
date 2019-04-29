@@ -44,6 +44,7 @@ module Financier
       transactions_to_sum
         .collect(&:amount)
         .sum
+        .round(2)
     end
   end
 end

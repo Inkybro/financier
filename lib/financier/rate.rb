@@ -84,7 +84,7 @@ module Financier
     # @param [DecNum] rate the effective interest rate
     # @api private
     def effective=(rate)
-      @effective = rate
+      @effective = Flt::DecNum.new(rate.to_s)
       @nominal = Rate.to_nominal(rate, @periods)
     end
 
@@ -131,12 +131,17 @@ module Financier
       (self.effective / 12).round(15)
     end
 
+    def daily
+      # TODO - Add spec
+      (self.effective / 360).round(15)
+    end
+
     # set the nominal interest rate
     # @return none
     # @param [DecNum] rate the nominal interest rate
     # @api private
     def nominal=(rate)
-      @nominal = rate
+      @nominal = Flt::DecNum.new(rate.to_s)
       @effective = Rate.to_effective(rate, @periods)
     end
   end

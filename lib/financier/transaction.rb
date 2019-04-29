@@ -3,13 +3,13 @@ module Financier
     attr_reader :amount
     attr_reader :date
 
-    def initialize(amount, date = Date.today)
+    def initialize(amount, date = Date[Time.now])
       send(:amount=, amount)
       send(:date=, date)
     end
 
     def amount=(value)
-      @amount = Flt::DecNum.new(value.to_s)
+      @amount = Flt::DecNum.new(value.to_s).round(2)
     end
 
     def credit?

@@ -3,6 +3,8 @@ require 'chronic'
 require 'flt'
 require 'flt/d'
 
+require 'financier/amortization'
+require 'financier/date'
 require 'financier/ledger'
 require 'financier/rate'
 require 'financier/transaction'
