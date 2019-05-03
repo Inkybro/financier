@@ -133,6 +133,6 @@ class Numeric
   # @see Amortization#new
   # @api public
   def amortize(rate, opt = {})
-    Financier::Amortization.new(self, opt)
+    Financier::Amortization.new(self, rate, opt)
   end
 end
